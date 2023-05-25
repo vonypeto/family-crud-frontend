@@ -7,6 +7,7 @@ import Layouts from "./layouts/Layouts";
 import Login from "./components/Login";
 import Signup from "./components/SignUp";
 import FamilyList from "./views/FamilyList";
+// import FamilyCreate from "./views/FamilyCreate";
 
 function App() {
   return (
@@ -22,7 +23,8 @@ function App() {
             <Routes>
               <Route exact path="/" element={<PrivateRoute />}>
                 <Route exact path="/" element={<Layouts />}>
-                  <Route path="/home" element={<FamilyList />} />
+                  <Route path="/home" element={<FamilyList />} />{" "}
+                  {/* <Route path="/create" element={<FamilyCreate />} /> */}
                   <Route path="/" element={<Navigate to="/home" />} />{" "}
                   {/* Redirect all other routes to the root */}
                 </Route>

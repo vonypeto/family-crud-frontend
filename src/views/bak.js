@@ -46,15 +46,6 @@ const FamilyCreate = () => {
   // Create House Member
   const onCreateHouseHoldMember = async (value) => {
     setIsLoading(true);
-    await axios
-      .post("/api/create", value)
-      .then((res) => {
-        const newArray = [...houseHoldMember, value];
-        message.success("New Family Added");
-      })
-      .catch((err) => {
-        message.warning(err.message);
-      });
     value.id = Math.random();
     const newArray = [...houseHoldMember, value];
     console.log(newArray);
@@ -168,6 +159,85 @@ const FamilyCreate = () => {
   }, []);
   return (
     <div>
+      <Form form={formHousehold} onFinish={onCreateHouseHoldName}>
+        <Card
+          title="Create Household"
+          extra={
+            <Button htmlType="submit" type="primary" className="mb-2">
+              Submit
+            </Button>
+          }
+        >
+          <Row>
+            <Col sm={12} md={12} lg={12}>
+              <Form.Item
+                label="Household Name"
+                name="household_name"
+                rules={[
+                  {
+                    required: true,
+                    message: "Please input your Household Name!",
+                  },
+                ]}
+              >
+                <Input />
+              </Form.Item>
+            </Col>
+            <Col sm={12} md={12} lg={12}>
+              <Form.Item
+                label="Address"
+                name="address"
+                rules={[
+                  { required: true, message: "Please input your Address!" },
+                ]}
+              >
+                <Input />
+              </Form.Item>
+            </Col>
+            <Col sm={12} md={12} lg={12}>
+              <Form.Item
+                label="House Status"
+                name="house_status"
+                rules={[
+                  {
+                    required: true,
+                    message: "Please input your House Status!",
+                  },
+                ]}
+              >
+                <Select
+                  className="w-100"
+                  defaultValue="Owned"
+                  style={{ width: 120 }}
+                >
+                  <Option value="Owned">Owned</Option>
+                  <Option value="Renting">Renting</Option>
+                  <Option value="Others">Others</Option>
+                </Select>
+              </Form.Item>
+            </Col>
+            <Col sm={12} md={12} lg={12}>
+              <Form.Item
+                label="House Number"
+                name="house_number"
+                rules={[
+                  {
+                    required: true,
+                    message: "Please input your House Number!",
+                  },
+                ]}
+              >
+                <InputNumber
+                  className="w-100"
+                  min={1}
+                  max={100000}
+                  defaultValue={0}
+                />
+              </Form.Item>
+            </Col>
+          </Row>
+        </Card>
+      </Form>
       <Card
         title="Household Members"
         extra={
@@ -248,12 +318,7 @@ const FamilyCreate = () => {
                     { required: true, message: "Please input your Age!" },
                   ]}
                 >
-                  <InputNumber
-                    className="w-100"
-                    min={1}
-                    max={1111}
-                    defaultValue={0}
-                  />
+                  <InputNumber min={1} max={1111} defaultValue={0} />
                 </Form.Item>
               </Col>{" "}
               <Col sm={12} md={12} lg={12}>

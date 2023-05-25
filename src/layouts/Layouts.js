@@ -24,6 +24,7 @@ const Layouts = () => {
   const { currentUser, logout } = useAuth();
 
   const handleChange = async (e) => {
+    if (e.key == "1") history("/home");
     if (e.key === "2") {
       setError("");
 
@@ -95,7 +96,6 @@ const Layouts = () => {
               background: colorBgContainer,
             }}
           >
-            test
             <Outlet></Outlet>
           </div>
         </Content>
