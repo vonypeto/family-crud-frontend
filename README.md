@@ -1,19 +1,54 @@
-# Getting Started with Create React App
+<!-- ABOUT THE PROJECT -->
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+### Family-Tree (PROJECT)
 
-## Available Scripts
+<p align="right">(<a href="#top">back to top</a>)</p>
 
-In the project directory, you can run:
+### Built With
 
-### `npm start`
+- [React.js](https://reactjs.org/)
+- [Ant Design](https://ant.design/)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+<p align="right">(<a href="#top">back to top</a>)</p>
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### Prerequisites
 
-### Version Used
+Install `npm` from [here](https://nodejs.org/en/download/) before proceeding to run the application.
 
-Nodejs
+- npm
+
+### Installation
+
+1. Clone the repo first clone this frontend and second clone this backend to run then both locally in your devices
+   ```sh
+   https://github.com/vonypeto/family-crud-frontend.git
+   ```
+   ```sh
+   https://github.com/vonypeto/family-crud-backend.git
+   ```
+2. Install NPM packages on both repositories
+   ```sh
+   npm install
+   ```
+3. Run the Application for the frontend
+   ```js
+   npm start
+   ```
+4. Run the Application for the backend
+   ````js
+   nodemon server
+    ```
+   <p align="right">(<a href="#top">back to top</a>)</p>
+   ````
+
+<!-- CONTRIBUTING -->
+
+### Contributer
+
+- [ Vonypeto](https://github.com/vonypeto)
+
+### Modules in the System
+
+- Home Family Table
+- Home Family View
+- Login & Signup
