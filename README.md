@@ -35,11 +35,11 @@ Install `npm` from [here](https://nodejs.org/en/download/) before proceeding to 
    npm start
    ```
 4. Run the Application for the backend
-   ````js
+
+   ```js
    nodemon server
-    ```
-   <p align="right">(<a href="#top">back to top</a>)</p>
-   ````
+
+   ```
 
 <!-- CONTRIBUTING -->
 
