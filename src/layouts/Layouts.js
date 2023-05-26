@@ -6,8 +6,9 @@ import { useAuth } from "../contexts/AuthContext";
 const { Header, Footer } = Layout;
 
 const Layouts = () => {
+  // Global Context Data
   const { currentUser } = useAuth();
-
+  // Theme of Layout
   const {
     token: { colorBgContainer },
   } = theme.useToken();
